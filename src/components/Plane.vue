@@ -5,11 +5,11 @@
 </template>
 
 <script setup lang="ts">
-import { setupPlane } from '../game/Plane'
-import planeImg from '../assets/vue.svg'
+import { setupPlane } from '../game/Plane';
+import planeImg from '../assets/plane.svg';
 import { reactive } from 'vue';
 
-const plane = setupPlane(reactive({}), { x: 10, y: 10 })
+const plane = setupPlane(reactive({}), { x: 10, y: 10, speed: 5 })
 window.addEventListener('keydown', (e) => {
   switch (e.key) {
     case 'ArrowUp':
